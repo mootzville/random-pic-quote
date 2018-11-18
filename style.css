@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Dynalight|Work+Sans:200');
+
+body {
+	color: white;
+	font-weight: 100;
+	background-repeat: 'no-repeat';
+	background-size: cover;
+}
+
+main, #preloader, #overlay {
+	width: 100vw;
+	height: 100vh;	
+}
+
+main {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-auto-flow: column;
+}
+
+#preloader {
+	position: fixed;
+	background-color: #000;
+	transition: background-color .5s ease-out;
+}
+
+#overlay {
+	background: rgba(0,0,0,0.5);
+}
+
+#quote {
+	align-self: end;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: 'Dynalight', cursive;
+	font-size: 1.5rem;
+	line-height: 1.55rem;
+	padding-top: 1rem;
+}
+
+#author {
+	align-self: start;
+	text-align: center;
+	padding-top: 1rem;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.1rem;
+}
+
+@media (min-width: 961px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#quote {
+		text-align: right;
+		padding-right: 0;
+		font-size: 2.25rem;
+		line-height: 2.3rem;
+	}
+
+	#author {
+		text-align: right;
+		font-size: 1.5rem;
+	}
+}
